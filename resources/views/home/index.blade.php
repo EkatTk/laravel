@@ -54,19 +54,19 @@
             <h1 class="header-title">How I Meet Your Mother</h1>
             <p class="header-subtitle">Американский сериал «Как я&nbsp;встретил вашу маму»&nbsp;— это захватывающий комедийный рассказ о&nbsp;поиске истинной любви и&nbsp;дружбы в&nbsp;суетливом мире Нью-Йорка. Пересекаясь с&nbsp;чередой веселых и&nbsp;неожиданных событий, главный герой Тед Мосби вспоминает свои приключения, пытаясь найти свою будущую жену. Смешанные и&nbsp;неожиданные повороты делают этот сериал невероятно увлекательным и&nbsp;незабываемым.</p>
 
-            <button class="btn btn-theme-color modal-toggle"><i class="ti-control-play text-danger"></i> Смотреть трейлер</button>
+            <!-- <button class="btn btn-theme-color modal-toggle"><i class="ti-control-play text-danger"></i> Смотреть трейлер</button> -->
 
         </div>
     </header><!-- end of page header -->
 
-    <!-- modal -->
-    <div class="modalBox">
+    
+    <!-- <div class="modalBox">
         <div class="modalBox-body" >
             <iframe width="100%" height="100%" class="border-0" 
             src="https://www.youtube.com/embed/JF4PHfg88Qk?si=oZb10dkLFeBu8dsm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>>
             </iframe>
         </div>          
-    </div><!-- end of modal -->
+    </div> -->
 
     <!-- page container -->
     <div class="container page-container">
