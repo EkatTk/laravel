@@ -18,6 +18,7 @@
 
 <body>
     <div class="section">
+        <div class="overlay"></div>
         <div class="container">
             <div class="row full-height justify-content-center">
                 <div class="col-12 text-center align-self-center py-5">

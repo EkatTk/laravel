@@ -15,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::paginate(10);
+        $categories = Category::paginate(15);
         return view('admin.categories.index', compact('categories'));
     }
 
@@ -72,7 +72,7 @@ class CategoryController extends Controller
         $category = Category::find($id);
         $category->slug=null;
         $category->update($request->all());
-        return redirect()->route('categories.index', ['category' => $category->id])->with('success', 'Категория изменена!');;
+        return redirect()->route('categories.index', ['category' => $category->id])->with('success', 'Категория изменена!');
     }
 
     /**

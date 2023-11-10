@@ -14,13 +14,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/article', 'HomeController@show')->name('post.single');
+Route::get('/show', 'HomeController@show')->name('show');
+Route::get('/read', 'HomeController@read')->name('read');
+Route::get('/episodes', 'HomeController@episodes')->name('episodes');
+
+Route::get('/season/{slug}', 'HomeController@showing')->name('home.season');
+Route::get('/episode/{slug}', 'HomeController@episode')->name('home.episode');
+Route::get('/article/{slug}', 'HomeController@reading')->name('home.article');
+Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
+
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'MainController@index')->name('admin.index');
     Route::resource('/categories', 'CategoryController');
     Route::resource('/tags', 'TagController');
     Route::resource('/posts', 'PostController');
+    Route::resource('/seasons', 'SeasonController');
+    Route::resource('/episodes', 'EpisodeController');
 });
 
 Route::group(['middleware' => 'guest'], function () {
