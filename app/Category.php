@@ -16,6 +16,16 @@ class Category extends Model
         return $this->hasMany(Post::class);
     }
 
+    public function seasons()
+    {
+        return $this->hasMany(Season::class);
+    }
+
+    public function episodes()
+    {
+        return $this->hasMany(Episode::class);
+    }
+
     /**
      * Return the sluggable configuration array for this model.
      *

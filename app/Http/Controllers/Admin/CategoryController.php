@@ -70,7 +70,7 @@ class CategoryController extends Controller
             'title' => 'required',
         ]);
         $category = Category::find($id);
-        $category->slug=null;
+        //$category->slug=null;
         $category->update($request->all());
         return redirect()->route('categories.index', ['category' => $category->id])->with('success', 'Категория изменена!');
     }

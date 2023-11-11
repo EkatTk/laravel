@@ -70,7 +70,7 @@ class TagController extends Controller
             'title' => 'required',
         ]);
         $tag = Tag::find($id);
-        $tag->slug=null;
+        //$tag->slug=null;
         $tag->update($request->all());
         return redirect()->route('tags.index', ['tag' => $tag->id])->with('success', 'Тег изменен!');;
     }

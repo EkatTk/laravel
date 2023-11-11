@@ -10,8 +10,8 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Blank Page</li>
+                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Главная</a></li>
+                    <li class="breadcrumb-item active"><a href="{{route('seasons.index')}}">Все сезоны</a></li>
                 </ol>
             </div>
         </div>
@@ -36,9 +36,7 @@
                             @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul class="list-unstyled">
-                                    @foreach ($errors->all() as $error)
                                     {{"Все поля должны быть заполнены!"}}
-                                    @endforeach
                                 </ul>
                             </div>
                             @endif
@@ -86,7 +84,7 @@
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" name="thumbnail" id="thumbnail" class="custom-file-input">
-                                        <label class="custom-file-label" for="thumbnail">Choose file</label>
+                                        <label class="custom-file-label" for="thumbnail">{{ $season->getImage() }}</label>
                                     </div>
                                 </div>
                                 <div><img src="{{ $season->getImage() }}" alt="" class="img-thumbnail mt-2" width="200"></div>

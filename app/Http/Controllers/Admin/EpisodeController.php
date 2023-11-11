@@ -92,7 +92,7 @@ class EpisodeController extends Controller
             'screenwriter' => 'required',
             'content' => 'required',
             'category_id' => 'required|integer',
-            'thumbnail' => 'required|image',
+            'thumbnail' => 'nullable|image',
             'url_video' => 'required',
         ]);
 

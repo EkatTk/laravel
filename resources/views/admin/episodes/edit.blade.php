@@ -10,8 +10,8 @@
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item active">Blank Page</li>
+                    <li class="breadcrumb-item"><a href="{{route('admin.index')}}">Главная</a></li>
+                    <li class="breadcrumb-item active"><a href="{{route('episodes.index')}}">Список эпизодов</a></li>
                 </ol>
             </div>
         </div>
@@ -36,9 +36,7 @@
                             @if ($errors->any())
                             <div class="alert alert-danger">
                                 <ul class="list-unstyled">
-                                    @foreach ($errors->all() as $error)
                                     {{"Все поля должны быть заполнены!"}}
-                                    @endforeach
                                 </ul>
                             </div>
                             @endif
@@ -64,6 +62,14 @@
                                 <label for="title_eng">Название на английском</label>
                                 <input type="text" name="title_eng" class="form-control @error('title_eng') is-invalid @enderror" id="title_eng" value="{{ $episode->title_eng }}">
                             </div>
+                            <div class="form-group">
+                                <label for="director">Режиссер</label>
+                                <input type="text" name="director" class="form-control @error('director') is-invalid @enderror" id="director" value="{{ $episode->director }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="screenwriter">Сценарист</label>
+                                <input type="text" name="screenwriter" class="form-control @error('screenwriter') is-invalid @enderror" id="screenwriter" value="{{ $episode->screenwriter }}">
+                            </div>
 
                             <div class="form-group">
                                 <label for="content">Сюжет</label>
@@ -78,13 +84,16 @@
                                     @endforeach
                                 </select>
                             </div>
-
+                            <div class="form-group">
+                                <label for="url_video">Видео</label>
+                                <input type="text" name="url_video" class="form-control @error('url_video') is-invalid @enderror" id="url_video" value="{{ $episode->url_video }}">
+                            </div>
                             <div class="form-group">
                                 <label for="thumbnail">Изображение</label>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" name="thumbnail" id="thumbnail" class="custom-file-input">
-                                        <label class="custom-file-label" for="thumbnail">Choose file</label>
+                                        <label class="custom-file-label" for="thumbnail">{{ $episode->getImage() }}</label>
                                     </div>
                                 </div>
                                 <div><img src="{{ $episode->getImage() }}" alt="" class="img-thumbnail mt-2" width="200"></div>

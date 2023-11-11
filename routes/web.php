@@ -16,12 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/show', 'HomeController@show')->name('show');
 Route::get('/read', 'HomeController@read')->name('read');
-Route::get('/episodes', 'HomeController@episodes')->name('episodes');
 
-Route::get('/season/{slug}', 'HomeController@showing')->name('home.season');
 Route::get('/episode/{slug}', 'HomeController@episode')->name('home.episode');
-Route::get('/article/{slug}', 'HomeController@reading')->name('home.article');
+Route::get('/read/{slug}', 'HomeController@reading')->name('posts.single');
 Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
+Route::get('/category/{slug}', 'CategoryController@read')->name('categories.single');
+Route::get('/show/{slug}', 'CategoryController@show')->name('categories.episode');
 
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {

@@ -22,18 +22,6 @@ class HomeController extends Controller
         $seasons = Season::with('category')->orderBy('created_at', 'asc')->paginate(9);
         return view('home.show', compact('seasons'));
     }
-    public function showing($slug)
-    {
-        $season = Season::where('slug', $slug)->firstOrFail();
-        $episodes = Episode::with('category')->orderBy('created_at', 'asc')->paginate(3);
-        return view('home.showing', compact('season', 'episodes'));
-    }
-
-    public function episodes()
-    {
-        $episodes = Episode::with('category')->orderBy('created_at', 'asc')->paginate(9);
-        return view('home.episodes', compact('episodes'));
-    }
 
     public function episode($slug)
     {

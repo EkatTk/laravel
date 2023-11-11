@@ -13,7 +13,7 @@
 <div class="row mb-2">
     @foreach($seasons as $season)
     <div class="col-md-4">
-        <a href="{{route('home.season', ['slug' => $season->slug]) }}" class="overlay-img">
+        <a href="{{route('categories.episode', ['slug' => $season->category->slug])}}" class="overlay-img">
             <img src="{{ $season->getImage() }}" alt="">
             <div class="overlay"></div>
             <div class="des">

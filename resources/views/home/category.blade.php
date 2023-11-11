@@ -1,11 +1,10 @@
 @extends('layouts.layout')
 
-@section('title', $tag->title)
+@section('title', $category->title)
 
 @section('header')
 
-<h1 class="header-title text-warning">Все статьи с тегом "{{$tag->title}}"</h1>
-<p class="header-subtitle"><strong>Осторожно: </strong>в некоторых статьях могут содержаться спойлеры!</p>
+<h1 class="header-title text-warning">Категория "{{$category->title}}"</h1>
 
 @endsection
 
@@ -15,7 +14,7 @@
 <div class="row mb-2">
     @foreach($posts as $post)
     <div class="col-md-6">
-        <a href="{{route('posts.single', ['slug' => $post->slug])}}" class="card">
+        <a href="{{route('posts.single', ['slug' => $post->slug]) }}" class="card">
             <img src="{{ $post->getImage() }}" class="card-img" alt="">
             <div class="card-body">
                 <h6 class="card-subtitle">{{$post->getPostDate() }}</h6>

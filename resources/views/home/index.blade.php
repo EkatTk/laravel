@@ -21,7 +21,7 @@
 <div class="row mb-2">
     @foreach($seasons as $season)
     <div class="col-md-4">
-        <a href="{{route('home.season', ['slug' => $season->slug])}}" class="overlay-img">
+        <a href="{{route('categories.episode', ['slug' => $season->category->slug])}}" class="overlay-img">
             <img src="{{ $season->getImage() }}" alt="">
             <div class="overlay"></div>
             <div class="des">
@@ -44,7 +44,7 @@
 <div class="row mb-2">
     @foreach($posts as $post)
     <div class="col-md-6">
-        <a href="{{route('home.article', ['slug' => $post->slug])}}" class="card">
+        <a href="{{route('posts.single', ['slug' => $post->slug])}}" class="card">
             <img src="{{ $post->getImage() }}" class="card-img" alt="">
             <div class="card-body">
                 <h6 class="card-subtitle">{{$post->getPostDate() }}</h6>

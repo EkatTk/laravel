@@ -24,9 +24,9 @@
             @if (Route::has('login'))
             @auth
             <li class="nav-item"><a href="{{ route('logout') }}" class="nav-link">Выйти</a></li>
-            @if (Auth::user()->is_admin)
+            <!-- @if (Auth::user()->is_admin)
             <li class="nav-item"><a href="{{ route('admin.index') }}" class="nav-link text-warning">Админка</a></li>
-            @endif
+            @endif -->
             @else
             <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Войти</a></li>
 
@@ -64,8 +64,13 @@
                 </form>
             </div>
 
-            <footer class="footer">
-                <p class="infos">&copy;<script>
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="{{url('/')}}" class="nav-link">Главная</a></li>
+                    <li class="nav-item"><a href="{{ route('show') }}" class="nav-link">Смотреть</a></li>
+                    <li class="nav-item"><a href="{{ route('read') }}" class="nav-link">Статьи</a></li>
+                </ul>
+                <p class="text-center" style="color: #393f44;">&copy;<script>
                         document.write(new Date().getFullYear())
                     </script>, Ткаченко Е.О. БПА20-01</p>
             </footer>

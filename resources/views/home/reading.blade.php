@@ -14,6 +14,14 @@
 <p class="text-warning">Дата публикации: <br> {{$post->getPostDate()}}</p>
 <div>{!!$post->description!!}</div>
 
+<p class="text-warning">Категория:
+    <a href="{{ route('categories.single', ['slug' => $post->category->slug]) }}" title="">
+        {{$post->category->title}}
+    </a>
+</p>
+
+
+
 @if($post->tags->count())
 
 <p class="text-warning">Теги: </p>
