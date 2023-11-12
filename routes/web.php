@@ -23,6 +23,7 @@ Route::get('/tag/{slug}', 'TagController@show')->name('tags.single');
 Route::get('/category/{slug}', 'CategoryController@read')->name('categories.single');
 Route::get('/show/{slug}', 'CategoryController@show')->name('categories.episode');
 
+Route::get('/search', 'SearchController@index')->name('search');
 
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'MainController@index')->name('admin.index');

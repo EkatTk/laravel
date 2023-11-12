@@ -19,7 +19,7 @@
         <ul class="nav-navbar container">
             <li class="nav-item"><a href="{{url('/')}}" class="nav-link">Главная</a></li>
             <li class="nav-item"><a href="{{ route('show') }}" class="nav-link">Смотреть</a></li>
-            <li class="nav-item"><a href="{{url('/')}}" class="nav-link"><img src="\assets\imgs/logo.png" alt="HIMYM" style="width: 70%"></a></li>
+            <li class="nav-item"><a href="{{url('/')}}" class="nav-link"><img src="/assets/imgs/logo.png" alt="HIMYM" style="width: 70%"></a></li>
             <li class="nav-item"><a href="{{ route('read') }}" class="nav-link">Статьи</a></li>
             @if (Route::has('login'))
             @auth
@@ -86,6 +86,12 @@
                             <div class="arrow right" id="aright">>></div>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-10 col-lg-8 m-auto">
+                <form class="form-inline" method="get" action="{{route('search')}}">
+                    <input name="s" class="form-control mr-sm-2  @error('s') is-invalid @enderror" type="text" placeholder="Что ищем?" required>
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Искать</button>
+                </form>
             </div>
 
 
