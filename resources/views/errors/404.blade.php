@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Dorang landing page.">
     <meta name="author" content="Devcrud">
-    <title>404 - How I Meet Your Mother</title>
+    <title>404 error</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
 

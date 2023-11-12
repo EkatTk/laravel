@@ -15,11 +15,11 @@
 <div class="row mb-2">
     @foreach($posts as $post)
     <div class="col-md-6">
-        <a href="{{route('posts.single', ['slug' => $post->slug])}}" class="card">
-            <img src="{{ $post->getImage() }}" class="card-img" alt="">
-            <div class="card-body">
-                <h6 class="card-subtitle">{{$post->getPostDate() }}</h6>
-                <h3 class="card-title text-warning">{{$post->title}}</h3>
+        <a href="{{route('posts.single', ['slug' => $post->slug])}}" class="cart">
+            <img src="{{ $post->getImage() }}" class="cart-img" alt="">
+            <div class="cart-body">
+                <h6 class="cart-subtitle">{{$post->getPostDate() }}</h6>
+                <h3 class="cart-title text-warning">{{$post->title}}</h3>
                 {!! $post->description !!}
             </div>
         </a>
@@ -27,7 +27,7 @@
     @endforeach
     <div class="row">
         <div class="col-md-12">
-            <div class="card-footer clearfix">
+            <div class="cart-footer clearfix">
                 {{ $posts->links() }}
             </div>
         </div>

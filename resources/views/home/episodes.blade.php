@@ -12,11 +12,11 @@
 <div class="row mb-2">
     @foreach($episodes as $episode)
     <div class="col-lg-4 col-md-6">
-        <a href="{{route('home.episode', ['slug' => $episode->slug]) }}" class="card">
-            <img src="{{ $episode->getImage() }}" class="card-img" alt="">
-            <div class="card-body">
-                <h6 class="card-subtitle text-warning">{{$episode->getEpisodeDate() }}</h6>
-                <h3 class="card-title">Эпизод {{$episode->episode}} - {{$episode->title}}</h3>
+        <a href="{{route('home.episode', ['slug' => $episode->slug]) }}" class="cart">
+            <img src="{{ $episode->getImage() }}" class="cart-img" alt="">
+            <div class="cart-body">
+                <h6 class="cart-subtitle text-warning">{{$episode->getEpisodeDate() }}</h6>
+                <h3 class="cart-title">Эпизод {{$episode->episode}} - {{$episode->title}}</h3>
             </div>
         </a>
     </div>

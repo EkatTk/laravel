@@ -61,4 +61,56 @@ $(document).ready(function(){
     });
 }); 
 
+function cardShift(currentCard, cards) {
+                        var cardCount = 0;
+                        index = currentCard - 2;
+                        if (index < 0) {
+                            index = cards.length + index;
+                        }
+                        while (cardCount < cards.length) {
+                            $(".card").eq(index).removeClass("p1 p2 p3 p4 p5 hidden")
+                            if (cardCount < 5) {
+                                $(".card").eq(index).addClass("p" + (cardCount + 1));
+                            } else {
+                                $(".card").eq(index).addClass("hidden")
+                            }
+                            cardCount = cardCount + 1;
+                            index = index + 1;
+                            if (index > cards.length - 1) {
+                                index = 0;
+                            }
+                        }
+                    }
 
+                    $(document).ready(function() {
+                        var card = 0;
+                        var cards = $(".card");
+                        var ignoreClick = false;
+                        cardShift(card, cards);
+
+                        function triggerClick(card) {
+                            cardShift(card, cards);
+                            ignoreClick = true;
+                            setTimeout(function() {
+                                ignoreClick = false
+                            }, 400);
+                        }
+
+                        $("#aleft").click(function() {
+                            if (ignoreClick) return;
+                            card = card - 1;
+                            if (card < 0) {
+                                card = cards.length - 1;
+                            }
+                            triggerClick(card);
+                        });
+
+                        $("#aright").click(function() {
+                            if (ignoreClick) return;
+                            card = card + 1;
+                            if (card > cards.length - 1) {
+                                card = 0;
+                            }
+                            triggerClick(card);
+                        })
+                    })
