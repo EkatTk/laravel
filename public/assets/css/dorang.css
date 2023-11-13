@@ -5334,7 +5334,6 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
   border-radius: 0.25rem;
 }
 
@@ -5358,7 +5357,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item.active {
-  color: #6c757d;
+  color: #ffc107;
 }
 
 .pagination {

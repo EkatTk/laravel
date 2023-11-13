@@ -47,7 +47,12 @@
     </header>
 
     <div class="container-singl">
-        <div class="row">
+        <div class="row mt-4">
+            <div class="col-12">
+                @yield('bread')
+            </div>
+        </div>
+        <div class="row mt-4">
             <div class="col-12 col-md-5">
                 <div class="col-12">@yield('img')</div>
             </div>

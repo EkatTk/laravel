@@ -31,7 +31,7 @@ class HomeController extends Controller
 
     public function read()
     {
-        $posts = Post::with('category')->orderBy('created_at', 'desc')->paginate(10);
+        $posts = Post::with('category')->orderBy('created_at', 'desc')->paginate(6);
         return view( 'home.read', compact('posts'));
     }
     public function reading($slug)

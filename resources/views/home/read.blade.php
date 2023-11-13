@@ -10,7 +10,12 @@
 @endsection
 
 @section('content')
-
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url('/')}}">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Статьи</li>
+    </ol>
+</nav>
 <!-- row -->
 <div class="row mb-2">
     @foreach($posts as $post)

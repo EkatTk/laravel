@@ -8,8 +8,16 @@
 
 @endsection
 
-@section('content')
+@section('bread')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url('/')}}">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Смотреть</a></li>
+    </ol>
+</nav>
+@endsection
 
+@section('content')
 <div class="row mb-2">
     @foreach($seasons as $season)
     <div class="col-md-4">

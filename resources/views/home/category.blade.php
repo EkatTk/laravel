@@ -8,6 +8,15 @@
 
 @endsection
 
+@section('bread')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url('/')}}">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Категория "{{$category->title}}"</li>
+    </ol>
+</nav>
+@endsection
+
 @section('content')
 
 <!-- row -->

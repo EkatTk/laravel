@@ -9,6 +9,16 @@
 
 @endsection
 
+@section('bread')
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{url('/')}}">Главная</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('show') }}">Смотреть</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{$season->title}}</a></li>
+    </ol>
+</nav>
+@endsection
+
 @section('img')
 <img src="{{ $season->getImage() }}" alt="" class="img-fluid">
 @endsection
